@@ -1,0 +1,550 @@
+<head>
+    <%- include("../partial/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+
+
+        <div class="main_header">
+            <div class="row w-100 h-100">
+                <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+                    <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+                        <img src="/image/corona1.png" class="img-fluid" width="450" height="500px">
+                    </div>
+                </div>
+
+                <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+                    <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+                        <h1> Let's Stay safe & Fight Together Against Cor<span class="corona_rot"><img src="/image/corona2.png" weight="30" height="50"></span>na Virus</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="corona_statistics">
+            <div class="mb-3">
+                <h3 class="text-uppercase text-center">COVID-19 cases in
+                    <spam id="country"></spam> <img src="" id="flag"></h3>
+            </div>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                <h5 class="card-title">Total Cases</h5>
+                                <span id="cases"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                <h5 class="card-title">Active Cases</h5>
+                                <span id="active"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                <h5 class="card-title">New Cases</h5>
+                                <span id="todayCases"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Critical Cases</h5>
+                                <span id="critical"></span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-3">
+                        <div class="card " style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">New Recovered Cases</h5>
+                                <span id="todayRecovered"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                <h5 class="card-title">Recovered Cases</h5>
+                                <span id="recovered"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                <h5 class="card-title">Total Deaths</h5>
+                                <span id="deaths"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 18px;">
+                                <h5 class="card-title">Total Test Done</h5>
+                                <span id="tests"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div>
+            <div class="section_header text-center mb-4 mt- 3">
+                <h1 style="color:red; "> News</h1>
+            </div>
+            <div class="row  d-flex ">
+                <div class="mx-2 px-2 d-flex justify-content-center">
+                    <% for(let i = 0; i<allnews.length; i++) { %>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/Images/<%= allnews[i].image %>" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= allnews[i].title %>
+                                </h5>
+                                <a href="/user/News" class="btn btn-primary">See More</a>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="container-fluid  pt-4 pb-4">
+            <div class="section_header text-center mb-4 mt- 3">
+                <h1 style="color:red; "> CoronaVirus Symptoms</h1>
+            </div>
+
+            <div class="container " style="background-image: linear-gradient(to left, #353d44, #226669); color: white; ">
+                <div class="row ">
+
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/chest.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 "> Chest Pain</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/head.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Headache</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/fever.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Fever</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/cough.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 "> Cough</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/tired.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Tiredness</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/lost.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Loss of Taste or Smell</figcaption>
+                        </figure>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid sub_section pt-4 pb-4">
+            <div class="section_header text-center mb-4 mt- 3" ">
+            <h1 style="color:red; "> Prevention Against CoronaVirus </h1>
+        </div>
+     <div class="container ">
+         <div class="row ">
+             <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                 <div class="row ">
+                     <div class="col-lg-4 col-md-4 col-12 ">
+                         <figure >
+                             <img src="/image/mask1.png "   width="120 " height="100 " >
+                         </figure>
+                         
+                     </div>
+    
+                     <div class="col-lg-8 col-md-8 col-12 ">
+                         <p>Wear a mask in public, especially indoors or when physical distancing is not possible.</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <figure >
+                            <img src="/image/homestay.jpg "   width="120 " height="100 " >
+                        </figure>
+                        
+                    </div>
+    
+                    <div class="col-lg-8 col-md-8 col-12 ">
+                        <p>Stay home and self-isolate from others in the household if you feel unwell.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <figure >
+                            <img src="/image/news.jpg "   width="120 " height="100 " >
+                        </figure>
+                        
+                    </div>
+    
+                    <div class="col-lg-8 col-md-8 col-12 ">
+                        <p>Stay informed by watching news and follow the recommended practices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <figure >
+                            <img src="/image/wash.jpg "   width="120 " height="100 " >
+                        </figure>
+                        
+                    </div>
+    
+                    <div class="col-lg-8 col-md-8 col-12 ">
+                        <p>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <figure >
+                            <img src="/image/calling.jpg "   width="120 " height="100 " >
+                        </figure>
+                        
+                    </div>
+    
+                    <div class="col-lg-8 col-md-8 col-12 ">
+                        <p>If you have a fever, cough and difficulty breathing, seek medical attention. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mt-4 ">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-4 col-12 ">
+                        <figure >
+                            <img src="/image/social.jpg "   width="120 " height="100 " >
+                        </figure>
+                        
+                    </div>
+    
+                    <div class="col-lg-8 col-md-8 col-12 ">
+                        <p>Maintain a safe distance from others (at least 1 metre), even if they don't appear to be sick</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
+    
+    </div>
+
+    <section id="about ">
+        <a class="Aone " href="/about ">
+            <h1>About Vaccine!</h1>
+        </a>
+        <div class="about-section wrapper " style="background-image: linear-gradient(to left, #353d44, #226669); color:white ">
+            <div class="container ">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-12 mb-lg-0 mb-5 mt-3 ">
+                        <div class="card border-0 ">
+                            <img src="/image/123.png " class="img-fluid " style="height:270px;background-image: linear-gradient(to left, #353d44, #226669); ">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-sec ">
+                        <h2 class="text-light ">Covaxin</h2>
+                        <p>Covaxin (codenamed as BBV152) is an inactivated virus-based COVID-19 vaccine developed by Bharat Biotech in collaboration with the Indian Council of Medical Research - National Institute of Virology.</p>
+                        <h6>Medical Use</h6>
+                        <p>A vaccine is generally considered effective if the estimate is ≥50% with a >30% lower limit of the 95% confidence interval.Effectiveness is generally expected to slowly decrease over time.</p>
+                        <p>A phase 3 clinical trial with 25,798 participants found that the vaccine is 64% (95% CI, 29–82%) effective against asymptomatic cases, 78% (65–86%) effective against symptomatic disease, 93% (57–100%) effective against severe
+                            disease, and 65% (33–83%) effective against the Delta variant.</p>
+                         
+
+                    </div>
+                </div>
+            </div>
+            <div class="container vaccine-type ">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-12 text-sec mb-lg-0 mt-5 ">
+                        <h2 class="text-light ">CoviShield</h2>
+                        <p>The Oxford–AstraZeneca COVID-19 vaccine, codenamed AZD1222,and sold under the brand names Covishield and Vaxzevria among others, is a viral vector vaccine for prevention of COVID-19. The vaccine is given by intramuscular injection.
+                            Studies carried out in 2020 showed that the efficacy of the vaccine is 76.0% at preventing symptomatic COVID-19 beginning at 22 days following the first dose, and 81.3% after the second dose.A study in Scotland found that,
+                            for symptomatic COVID-19 infection after the second dose, the vaccine is 81% effective against the Alpha variant (lineage B.1.1.7), and 61% against the Delta variant (lineage B.1.617.2).
+                        </p>
+                        <p>The vaccine is stable at refrigerator temperatures and has a good safety profile, with side effects including injection-site pain, headache, and nausea, all generally resolving within a few days.Some countries have limited
+                            its use to elderly people at higher risk for severe COVID-19 illness due to concerns over the very rare side effects of the vaccine in younger individuals</p>
+                        
+
+                    </div>
+                    <div class="col-lg-6 col-md-12 mt-4 ">
+                        <div class="card border-0 ">
+                            <img src="/image/cs.png " class="img-fluid " style="background-image: linear-gradient(to left, #353d44, #226669); ">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container ">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-12 mb-lg-0 mb-5 mt-3 ">
+                        <div class="card border-0 ">
+                            <img src="/image/m.png " class="img-fluid " style="background-image: linear-gradient(to left, #353d44, #226669); " >
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-sec ">
+                        <h2 class="text-light ">Moderna Spikevax</h2>
+                        <p>The Moderna COVID‑19 vaccine, sold under the brand name Spikevax, is a COVID-19 vaccine developed by American company Moderna, the United States National Institute of Allergy and Infectious Diseases (NIAID), and the Biomedical
+                            Advanced Research and Development Authority (BARDA). It is authorized for use in people aged twelve years and older in some jurisdictions and for people eighteen years and older in other jurisdictions to provide protection
+                            against COVID-19 which is caused by infection by the SARS-CoV-2 virus.
+                            <p>The Moderna COVID‑19 vaccine is used to provide protection against infection by the SARS-CoV-2 virus in order to prevent COVID‑19. The vaccine is given by intramuscular injection into the deltoid muscle on the shoulder.The
+                                initial course consists of two doses. The World Health Organization (WHO) recommends an interval of 28 days between doses. Data show that first dose efficacy persists for up to ten weeks. Therefore, to avoid deaths
+                                where supplies are limited, the WHO recommends delaying the second dose by up to 12 weeks to achieve high coverage of the first dose in high-priority groups.A third or fourth dose can be added in some countries</p>
+                             
+
+                    </div>
+                </div>
+            </div>
+            <div class="container vaccine-type ">
+                <div class="row align-items-center ">
+                    <div class="col-lg-6 col-md-12 text-sec mb-lg-0 mt-5 ">
+                        <h2 class="text-light ">Janssen</h2>
+                        <p>The Janssen COVID-19 vaccine, or Johnson & Johnson COVID-19 vaccine, is a COVID-19 vaccine that was developed by Janssen Vaccines in Leiden, Netherlands, and its Belgian parent company Janssen Pharmaceuticals, a subsidiary
+                            of American company Johnson & Johnson.It is a viral vector vaccine based on a human adenovirus that has been modified to contain the gene for making the spike protein of the SARS-CoV-2 virus that causes COVID-19.The body's
+                            immune system responds to this spike protein to produce antibodies.</p>
+                        <h6>Medical Use</h6>
+                        <p>The Janssen COVID‑19 vaccine is used to provide protection against infection by the SARS-CoV-2 virus in order to prevent COVID-19 in people aged eighteen years and older.The vaccine is given by intramuscular injection into
+                            the deltoid muscle. The initial course consists of a single dose.There is no evidence that a second booster dose is needed to prevent severe disease in healthy adults.On 21 October, the CDC began recommending a booster
+                            dose.
+                        </p>
+                     
+
+                    </div>
+                    <div class="col-lg-6 col-md-12 mt-4 ">
+                        <div class="card border-0 ">
+                            <img src="/image/j1.png " class="img-fluid " style="background-image: linear-gradient(to left, #353d44, #226669); ">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="accordian ">
+        <h1> Frequently Asked Questions (FAQ)</h1>
+
+        <div class="card mt-3 ">
+            <div class="card-header ">
+                <h5> What are the benefits of getting vaccinated? </h5>
+                <span class="fa fa-minus "></span>
+            </div>
+            <div class="card-body active ">
+                <p>Getting vaccinated could save your life. COVID-19 vaccines provide strong protection against serious illness, hospitalization and death. There is also some evidence that being vaccinated will make it less likely that you will pass
+                    the virus on to others, which means your decision to get the vaccine also protects those around you.</p>
+                <p>Even after getting vaccinated, keep taking precautions to protect yourself, family, friends and anyone else you may come into contact with. COVID-19 vaccines are highly effective, but some people will still get ill from COVID-19 after
+                    vaccination. There is also still a chance that you could also pass the virus on to others who are not vaccinated. Stay at least 1 metre away from other people, wear a properly fitted mask over your nose and mouth when you can’t
+                    keep this distance, avoid poorly ventilated places and settings, clean your hands frequently, stay home if unwell and get tested, and stay informed about how much virus is circulating in the areas where you travel, live and work.
+                </p>
+            </div>
+        </div>
+
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Who should get vaccinated against COVID-19 ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>WHO recommends that while vaccine supply is limited, the people at highest risk of COVID-19 are vaccinated first. This includes people who are more likely to get severe disease if they are infected (older persons and people with existing
+                    health conditions) and people who are more likely to be exposed to the virus (such as health workers). People who are pregnant have a higher risk of serious illness and preterm birth if they are infected with COVID-19, so WHO recommends
+                    that they are also prioritized for vaccination, once the first priority groups have been vaccinated.</p>
+                <p>If you live in a country where vaccines are available to more people beyond these priority groups, get vaccinated as soon as it is your turn.</p>
+                <p>WHO-authorized COVID-19 vaccines are safe for most people of 18 years and older, including those with pre-existing conditions of any kind such as auto-immune disorders. These conditions include hypertension, diabetes, asthma, pulmonary,
+                    liver and kidney disease, as well as chronic infections that are stable and controlled.</p>
+                <p>The Pfizer vaccine can be safely administered to children from 5 years of age. Both Moderna and Pfizer vaccines are licensed for use in children from 12 years of age. </p>
+                <p>Vaccine trials for the use of other COVID-19 vaccines in children and adolescents are ongoing and WHO will update its recommendations when the evidence or epidemiological situation justifies a change in policy.</p>
+                <p>Children and adolescents above 5 years of age with comorbidities that put them at significantly higher risk of serious COVID-19 may be offered vaccination alongside other high priority groups.</p>
+            </div>
+        </div>
+
+
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Who should not be vaccinated aginst COVID-19? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>There are very few conditions that would exclude someone from being vaccinated, but you should NOT be vaccinated if:</p>
+                <ul>
+                    <li>You have a history of severe allergic reactions/anaphylaxis to any of the ingredients of the COVID-19 vaccine, in order to avoid possible adverse effects</li>
+                    <li>You have a fever over 38.5ºC on the day of your vaccine appointment. Postpone until you have recovered.</li>
+                    <li>You currently have confirmed or suspected COVID-19. Wait until you have completed the mandated isolation period and your acute symptoms have passed to get vaccinated.</li>
+
+
+                </ul>
+                <p>COVID-19 vaccines are safe for people taking blood thinners, but you should let the person giving you the vaccine know about any medication you are taking BEFORE you are given the vaccine.</p>
+                <p>In addition to the general recommendations above, each vaccine may have specific considerations for specific populations and health conditions. Talk to your doctor for advice about your specific situation.</p>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Should I be vaccinated if I have had COVID-19 ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>Yes. Even if you have already had COVID-19, you should be vaccinated. The protection that someone gains from having COVID-19 will vary greatly from person to person. The immunity people get from being vaccinated after having a natural
+                    infection is consistently very strong. Getting vaccinated even if you have had COVID-19 means you are more likely to be protected for longer.</p>
+                <p>There is currently no evidence to determine the optimal time that you should wait to be vaccinated after having COVID-19. Persons with laboratory-confirmed COVID-19 infection can consider delaying vaccination for 6 months based on
+                    the fact that natural infection leads to some protection against infection. Ask your health worker for advice.</p>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Can I get vaccinated against COVID-19 if I am preggnant ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>Yes, you can get vaccinated if you are pregnant. During pregnancy, you are at higher risk of serious illness caused by COVID-19. You are also at higher risk of delivering your baby prematurely if you contract COVID-19. While there
+                    is less data available on vaccination of pregnant people, evidence on the safety of COVID-19 vaccines during pregnancy has been growing, and no safety concerns have been identified. Especially in countries with high transmission,
+                    or if you have an occupation where you are at more risk of being exposed to COVID-19, the benefits of getting the vaccine outweigh potential risks. There is no risk of getting COVID-19 from the vaccine. Talk to your healthcare
+                    provider to make an informed decision about vaccination.</p>
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Is its safe to drink alcohol after getting a COVID-19 vaccine ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>There is no evidence that the safety or effectiveness of COVID-19 vaccines is affected by anything you eat or drink before or after getting vaccinated, including alcohol. However, drinking alcohol can add to the normal mild to moderate
+                    side effects that you might experience after vaccination, such as a headache and tiredness. Because of this, it is advisable to avoid drinking until any side effects following vaccination have passed. Learn more about the side
+                    effects of COVID-19 vaccines.</p>
+                <p>While COVID-19 vaccines are highly effective at preventing serious illness and death, there is still a chance you could be infected after being vaccinated. Continue to protect yourself and others by continuing to practice physical
+                    distancing, wear a well-fitted mask over your nose and mouth, clean your hands frequently, stay home if you feel unwell, cover coughs and sneezes and keep indoor spaces well ventilated. Drinking alcohol may make you less vigilant
+                    in practicing these behaviours and so can put you and others at risk.</p>
+                <p>Please keep in mind that drinking alcohol can increase your risk of other health problems.</p>
+
+            </div>
+
+        </div>
+        <div class="card ">
+            <div class="card-header ">
+                <h5>What are the side effectts of COVID-19 vaccines ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>Like with any vaccine, some people will experience mild to moderate side effects after being vaccinated against COVID-19. This is a normal sign that the body is developing protection. Side effects to COVID-19 vaccines include a fever,
+                    tiredness, headache, muscle ache, chills, diarrhoea and pain or redness at the injection site. Not everyone will experience side effects. Most side effects go away within a few days on their own. You can manage any side effects
+                    with rest, plenty of non-alcoholic liquids and taking medication to manage pain and fever, if needed.</p>
+                <p>If you are worried that the side effects that you are experiencing are unusual, if the pain in the arm where you got the injection gets worse after 24 hours or your side effects don’t go away in a few days, contact your healthcare
+                    provider for advice.</p>
+                <p>More serious or long-lasting side effects to COVID-19 vaccines are possible but extremely rare. If you experience difficulty breathing, chest pain, confusion, loss of speech or mobility after your vaccine, contact your healthcare provider
+                    immediately. Vaccines are continually monitored for as long as they are in use to detect and respond to rare adverse events.</p>
+
+            </div>
+
+        </div>
+        <div class="card ">
+            <div class="card-header ">
+                <h5>Can I still get COVID-19 after I have been vaccinated ? </h5>
+                <span class="fa fa-plus "></span>
+            </div>
+            <div class="card-body ">
+                <p>Yes. The maximum level of protection from COVID-19 vaccines is not reached until several weeks after full vaccination. If you have a two-dose vaccine, this means that you don’t get full immunity until 2 – 4 weeks after the second dose.
+                    You can still become infected and ill during this time.</p>
+                <p>While COVID-19 vaccines are highly effective against serious illness, hospitalisation and death, no vaccine is 100% effective. As a result, a number of vaccinated people will get infected and may fall ill with COVID-19 in spite of
+                    being fully vaccinated. This is known as a ‘breakthrough infection’ or ‘breakthrough case’. With more infectious virus variants such as Delta, we are seeing more breakthrough infections and cases.</p>
+                <p>Breakthrough infections can happen with every vaccine, and do not mean that the vaccine does not work. According to data from the US CDC, unvaccinated people are at 11 times the risk of death from COVID-19 than vaccinated people. People
+                    who get COVID-19 after being vaccinated are much more likely to only experience mild symptoms; efficacy against serious illness and death remains high. Get vaccinated, as soon as it’s your turn.</p>
+                <p>Even once you are fully vaccinated, continue to practice the same prevention measures to protect yourself. Stay at least 1 metre away from other people, wear a well fitted mask over your nose and mouth when you can’t keep this distance,
+                    avoid poorly ventilated places and settings, clean your hands frequently, stay home if unwell and get tested and stay informed about how much virus is circulating in the areas where you travel, live and work.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+        <%- include('../partial/footer.ejs') %>
+            <script>
+                fetch("https://disease.sh/v3/covid-19/countries/india ")
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        document.getElementById('flag').src = data.countryInfo.flag;
+                        document.getElementById('country').innerHTML = data.country;
+                        document.getElementById('cases').innerHTML = data.cases;
+                        document.getElementById('active').innerHTML = data.active;
+                        document.getElementById('todayCases').innerHTML = data.todayCases;
+                        document.getElementById('critical').innerHTML = data.critical;
+                        document.getElementById('deaths').innerHTML = data.deaths;
+                        document.getElementById('todayRecovered').innerHTML = data.todayRecovered;
+                        document.getElementById('recovered').innerHTML = data.recovered;
+                        document.getElementById('tests').innerHTML = data.tests;
+
+                    })
+
+                function loadGoogleTranlate() {
+                    new google.translate.TranslateElement('google_element')
+                }
+            </script>
+              <script>
+                $(document).ready(function() {
+                    $(" .card-header ").click(function() {
+                        // self clicking close
+                        if ($(this).next('.card-body').hasClass('active')) {
+                            $(this).next('.card-body').removeClass('active').slideUp()
+                            $(this).children('span').removeClass('fa-minus').addClass('fa-plus')
+                        } else {
+                            $('.card .card-body ').removeClass('active').slideUp()
+                            $('.card .card-header span').removeClass('fa-minus').addClass('fa-plus');
+                            $(this).next('.card-body').addClass('active').slideDown()
+                            $(this).children('span').removeClass('fa-plus').addClass('fa-minus')
+                        }
+                    })
+                })
+            </script>
+
+
+
+</body>

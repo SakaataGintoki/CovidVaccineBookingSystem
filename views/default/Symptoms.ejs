@@ -1,0 +1,63 @@
+<head>
+    <%- include("../partial/head.ejs") %>
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+        <div class="container-fluid  pt-4 pb-4">
+            <div class="section_header text-center mb-4 mt- 3">
+                <h1 style="color:red; "> CoronaVirus Symptoms</h1>
+            </div>
+
+            <div class="container " style="background-image: linear-gradient(to left, #353d44, #226669); color: white; ">
+                <div class="row ">
+
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/chest.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 "> Chest Pain</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/head.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Headache</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/fever.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Fever</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/cough.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 "> Cough</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/tired.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Tiredness</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-5 ">
+                        <figure class="text-center ">
+                            <img src="/image/lost.jpg " alt=" " class="img-fluid " width="200 " height="200 ">
+                            <figcaption class=" fs-2 ">Loss of Taste or Smell</figcaption>
+                        </figure>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <%- include("../partial/footer.ejs") %>
+            <script>
+                function loadGoogleTranlate() {
+                    new google.translate.TranslateElement("google_element")
+                }
+            </script>
+</body>

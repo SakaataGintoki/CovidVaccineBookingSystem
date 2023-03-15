@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    box-sizing: content-box;
+}
+
+.about-section {
+    background: var(--white-color);
+}
+
+.about-section .card,
+.about-section .card img {
+    border-radius: 0.625rem;
+}
+
+.about-section .text-sec {
+    padding-left: 2rem;
+}
+
+.main-btn {
+    color: red;
+}
+
+.vaccine-type {
+    padding: 3.25rem;
+}
+
+.Aone h1 {
+    padding: 8px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.Aone h1:hover {
+    color: red;
+}
+
+.accordian {
+    max-width: 600px;
+    display: block;
+    margin: 100px auto;
+}
+
+.accordian.card {
+    box-shadow: 0px 0px 20px #d4d4d4;
+    margin: bottom 20px;
+}
+
+.accordian .card .card-header h5 {
+    cursor: pointer;
+    color: #ffffff;
+    position: relative;
+    background-image: linear-gradient(to left, #353d44, #226669);
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 18px;
+}
+
+.accordian .card .card-header {
+    position: relative;
+}
+
+.accordian .card .card-header span {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    height: 25px;
+    width: 25px;
+    color: #3343a2;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.accordian .card .card-body {
+    padding: 20px;
+}
+
+.accordian .card .card-body {
+    display: none;
+}
+
+
+/* open one card */
+
+.accordian .card:nth-child(1) .card-body {
+    display: block;
+}
+
+.accordian .card .card-body p {
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    margin: 0px;
+}

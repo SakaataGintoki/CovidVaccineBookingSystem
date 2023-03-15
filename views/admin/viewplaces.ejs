@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/admin/head.ejs") %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include("../partial/admin/sidenavbar.ejs") %>
+
+
+            <div class="main">
+
+                <%- include("../partial/admin/mainnavbar.ejs") %>
+
+
+                    <main class="content">
+                        <div class="container-fluid p-0">
+                            <div>
+                                <table id="exampletable" class="table table-striped" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>S.N.</th>
+                                            <th>Place Name</th>
+                                            <th>City </th>
+                                            <th>Available Time</th>
+                                            <th>Vaccine Name</th>
+                                            <th>SLots</th>
+                                            <th>Vaccine Details</th>
+                                            <th collapse="2">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <% for(let i = 0; i < allplaces.length; i++) {%>
+                                            <tr>
+                                                <th>
+                                                    <%= i+1  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].placename  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].cityname  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].availabletime  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].vaccinename  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].vaccineslot  %>
+                                                </th>
+                                                <th>
+                                                    <%= allplaces[i].vaccinedetails  %>
+                                                </th>
+                                                <th>
+                                                    <div class="d-flex justify-content-between">
+                                                        <button class="btn btn-success"><a href="/admin/updateplace/<%= allplaces[i].id %>" class="text-light " style="text-decoration: none">Update</a></button>
+                                                        <button class="btn btn-danger"><a href="" class="text-light " style="text-decoration: none">Delete</a></button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <% } %>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </main>
+
+
+            </div>
+    </div>
+
+    <%- include("../partial/admin/footer.ejs") %>
+
+
+</body>
+
+</html>

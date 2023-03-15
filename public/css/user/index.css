@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_style {
+    background-image: linear-gradient(to left, #353d44, #226669);
+}
+
+.main_header {
+    height: 350px;
+    width: 100%;
+}
+
+.rightside h1 {
+    font-size: 3rem;
+}
+
+.corona_rot img {
+    animation: gocorona 3s linear infinite;
+}
+
+@keyframes gocorona {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nav_style a {
+    color: white;
+}
+
+.nav_style a:hover {
+    color: rgb(255, 204, 0);
+}
+
+#flag {
+    height: 35px;
+}
+
+
+/* ********************
+ */
+
+.corona_statistics {
+    margin: 0 0 30px 0;
+}
+
+.corona_statistics h3 {
+    color: #ff7675;
+}
+
+.corona_statistics h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.findbtn {
+    border-radius: 25px;
+}

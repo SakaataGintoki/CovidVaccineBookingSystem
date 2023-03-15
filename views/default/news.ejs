@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/head.ejs") %>
+
+</head>
+
+<body>
+    <%- include("../partial/navbar.ejs") %>
+
+        <div class="container-fluid">
+            <div class="row justify-content-around mt-3 mb-4 ">
+                <h1 class="text-center">NEWS</h1>
+                <% for(let i=0; i < uploadimage.length; i++) { %>
+
+                    <div class="col-6 m-5 card" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+
+                        <img src="/Images/<%= uploadimage[i].image %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= uploadimage[i].title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= uploadimage[i].description %>
+                            </p>
+                        </div>
+                    </div>
+                    <% } %>
+
+            </div>
+        </div>
+        <%- include('../partial/footer.ejs') %>
+            <script>
+                function loadGoogleTranlate() {
+                    new google.translate.TranslateElement("google_element")
+                }
+            </script>
+</body>
+
+</html>

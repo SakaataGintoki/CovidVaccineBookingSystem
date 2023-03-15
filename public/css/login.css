@@ -1,0 +1,16 @@
+.form-container {
+    position: absolute;
+    top: 15vh;
+    background-image: linear-gradient(to left, #353d44, #000707);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 14px 0px 10px 0px #191717;
+    color: #fff;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

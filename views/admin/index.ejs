@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/admin/head.ejs") %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include("../partial/admin/sidenavbar.ejs") %>
+
+            <style>
+                #flag {
+                    height: 35px;
+                }
+                
+                body {
+                    margin: 0;
+                }
+                
+                #map {
+                    height: 400px;
+                    width: 100vw;
+                }
+                
+                .marker {
+                    background-image: url('/image/marker.png');
+                    background-size: cover;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            </style>
+            <div class="main">
+
+                <%- include("../partial/admin/mainnavbar.ejs") %>
+
+                    <section class="corona_statistics">
+                        <div class="mb-3">
+                            <h3 class="text-uppercase text-center">COVID-19 cases in
+                                <spam id="country"></spam> <img src="" id="flag"></h3>
+                        </div>
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                            <h5 class="card-title">Total Cases</h5>
+                                            <span id="cases"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                            <h5 class="card-title">Active Cases</h5>
+                                            <span id="active"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                            <h5 class="card-title">New Cases</h5>
+                                            <span id="todayCases"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Critical Cases</h5>
+                                            <span id="critical"></span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <div class="card " style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">New Recovered Cases</h5>
+                                            <span id="todayRecovered"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                            <h5 class="card-title">Recovered Cases</h5>
+                                            <span id="recovered"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 20px;">
+                                            <h5 class="card-title">Total Deaths</h5>
+                                            <span id="deaths"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body text-center" style=" background-image: linear-gradient(to left, #353d44, #226669); color: white; border-radius: 18px;">
+                                            <h5 class="card-title">Total Test Done</h5>
+                                            <span id="tests"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="row d-flex justify-content-center">
+                        <div class="col-md-6 mb-4 ">
+                            
+                            <div class="card p-3 border-lg">
+                                <div class="px-3 py-2 border-bottom">
+                                    
+                                    <h4 class="card-title m-3"><a>ADD Places</a></h4>
+                                </div>
+
+                                
+                                <div class="card-body">
+                                    <div class="row  justify-content-around ">
+
+                                        <div class=" col-md-12 form-group mb-4">
+                                            <input type="text" class="form-control p-2 " name="Coorinate" placeholder="Coordinate " required>
+                                        </div>
+                                        <div class=" col-md-12 form-outline mb-4">
+                                            <input type="text" class="form-control p-2 " name="Title" placeholder="Title" required>
+                                        </div>
+                                        <div class=" col-md-12 form-outline mb-4">
+                                            <input type="text" class="form-control p-2 " name="Description" placeholder="Description" required>
+                                        </div>
+                                        <div class=" col-md-12  d-flex  justify-content-center  text-center ">
+                                            <div> <input type="submit" class="btn btn-success  " name="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- <div id='map'></div>
+
+                    <script src="/js/map.js" defer></script> -->
+            </div>
+    </div>
+
+
+    <%- include("../partial/admin/footer.ejs") %>
+        <script>
+            fetch("https://disease.sh/v3/covid-19/countries/india ")
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    document.getElementById('flag').src = data.countryInfo.flag;
+                    document.getElementById('country').innerHTML = data.country;
+                    document.getElementById('cases').innerHTML = data.cases;
+                    document.getElementById('active').innerHTML = data.active;
+                    document.getElementById('todayCases').innerHTML = data.todayCases;
+                    document.getElementById('critical').innerHTML = data.critical;
+                    document.getElementById('deaths').innerHTML = data.deaths;
+                    document.getElementById('todayRecovered').innerHTML = data.todayRecovered;
+                    document.getElementById('recovered').innerHTML = data.recovered;
+                    document.getElementById('tests').innerHTML = data.tests;
+
+                })
+        </script>
+</body>
+
+</html>

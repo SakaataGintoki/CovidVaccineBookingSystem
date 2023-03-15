@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: #aaaab3;
+}
+
+.container {
+    background-color: white;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    border: 5px solid #66e3f3;
+    border-radius: 5px;
+    min-height: 90vh;
+    position: relative
+}
+
+.new {
+    color: red;
+    font-weight: bold;
+}
+
+.new h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom_content {
+    height: 200px;
+    background: #d0ccff;
+    padding: 5px;
+    /* max-width: 500px; */
+    border: 15px solid #8f88e4;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0
+}

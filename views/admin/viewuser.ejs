@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/admin/head.ejs") %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include("../partial/admin/sidenavbar.ejs") %>
+
+
+            <div class="main">
+
+                <%- include("../partial/admin/mainnavbar.ejs") %>
+
+
+                    <main class="content">
+                        <div class="container-fluid p-0">
+                            <div>
+                                <table id="exampletable" style="overflow-y: auto;" class="table table-striped" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>S.N.</th>
+                                            <th>Aadhaar No</th>
+                                            <th>User Name</th>
+                                            <th>Email </th>
+                                            <th>Age</th>
+                                            <th>Gender</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(let i= 0; i< allusers.length; i++) { %>
+                                            <tr>
+                                                <td>
+                                                    <%= i+1 %>
+                                                </td>
+                                                <td>
+                                                    <%= allusers[i].citizenshipid %>
+                                                </td>
+                                                <td>
+                                                    <%= allusers[i].firstname %>
+                                                        <%= allusers[i].lastname %>
+
+                                                </td>
+                                                <td>
+                                                    <%= allusers[i].email %>
+                                                </td>
+                                                <td>
+                                                    <%= allusers[i].date %>
+                                                </td>
+                                                <td>
+                                                    <%= allusers[i].gender %>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-danger"><a href="/deleteuser/<%= allusers[i].id %>" class="text-light" >Delete</a></button>
+                                                </td>
+
+                                            </tr>
+                                            <% } %>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </main>
+
+
+            </div>
+    </div>
+
+    <%- include("../partial/admin/footer.ejs") %>
+
+
+</body>
+
+</html>

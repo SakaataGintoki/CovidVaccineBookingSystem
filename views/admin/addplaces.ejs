@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partial/admin/head.ejs") %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include("../partial/admin/sidenavbar.ejs") %>
+
+
+            <div class="main">
+
+                <%- include("../partial/admin/mainnavbar.ejs") %>
+
+                    <main class="content">
+                        <div class="container-fluid p-0">
+                            <div class="row">
+
+                                <form action="/newplaces" method="POST">
+                                    <div class="row justify-content-around  p-3">
+                                        <div class="col-md-6 mb-4 ">
+                                            <!-- Card -->
+                                            <div class="card p-3 border-lg">
+                                                <div class="px-3 py-2 border-bottom">
+                                                    <!-- Title -->
+                                                    <h4 class="card-title m-3"><a>ADD Places</a></h4>
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+                                                    <div class="row  justify-content-around ">
+
+                                                        <div class=" col-md-12 form-group mb-4">
+                                                            <input type="text" class="form-control p-2 " name="placename" placeholder="Hospital Name">
+                                                        </div>
+                                                        <div class=" col-md-12 form-outline mb-4">
+                                                            <input type="text" class="form-control p-2 " name="cityname" placeholder="Hospital Address">
+                                                        </div>
+                                                        <div class=" col-md-12 form-outline mb-4">
+                                                            <input type="text" class="form-control p-2 " name="availabletime" placeholder="Available Time">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 ">
+                                            <!-- Card -->
+                                            <div class="card p-3">
+                                                <div class="px-3 py-2 border-bottom">
+                                                    <!-- Title -->
+                                                    <h4 class="card-title m-3"><a>Add Vaccine</a></h4>
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+                                                    <div class="row  justify-content-around ">
+
+                                                        <div class=" col-md-12 col-12 form-group mb-4">
+
+                                                            <input type="text" name="vaccinename" class="form-control p-2  " placeholder="Vaccine name">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row  justify-content-around  ">
+
+                                                        <div class=" col-md-12 form-group mb-4 ">
+                                                            <input type="text" name="vaccinedetails" class="form-control p-2 " placeholder="Vaccine Details">
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="row ">
+                                        <div class="p-2 d-flex justify-content-center"> <input type="submit" class="btn btn-primary" value="Add"></div>
+
+                                    </div>
+
+
+
+
+
+
+
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </main>
+
+
+            </div>
+    </div>
+
+    <%- include("../partial/admin/footer.ejs") %>
+
+</body>
+
+</html>

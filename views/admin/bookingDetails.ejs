@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+    <%- include("../partial/admin/head.ejs") %>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include("../partial/admin/sidenavbar.ejs") %>
+
+
+            <div class="main">
+
+                <%- include("../partial/admin/mainnavbar.ejs") %>
+
+
+                    <main class="content">
+                        <div class="container-fluid p-0">
+                            <div>
+                                <table id="myTable" class="display" style="width:100%;  overflow:scroll; ">
+                                    <thead>
+                                        <tr>
+                                            <th>S.N.</th>
+                                            <th>User Name</th>
+                                            <th>User Address </th>
+                                            <th>Phone Number</th>
+                                            <th>For Whom</th>
+                                            <th>Dose</th>
+                                            <th>Date Of Injecting Vaccine</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for (let i = 0; i < abc.length; i++) {%>
+                                            <tr>
+                                                <th>
+                                                    <%= i+1  %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].fullname %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].address %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].phonenumber %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].whom %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].dose %>
+                                                </th>
+                                                <th>
+                                                    <%= abc[i].bdate %>
+                                                </th>
+                                                <th>
+                                                    <div class="toggleBox">
+                                                        <div class="toggle radio-green">
+                                                            <input type="radio" name="abc" class="bg-danger" checked>
+
+                                                            <label for="" class="ofbtn ">Pending</label>
+                                                            <br>
+
+                                                            <input type="radio" name="abc" class="inp">
+                                                            <label for="" class="onbtn">Vaccinated</label>
+
+                                                            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+                                                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+                                                        </div>
+                                                    </div>
+                                                </th>
+
+
+                                            </tr>
+                                            <% } %>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </main>
+
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
+    <%- include("../partial/admin/footer.ejs") %>
+
+
+
+</body>
+
+</html>

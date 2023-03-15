@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: linear-gradient(to left, #0084ff, #00f2ff);
+}
+
+.navbar a {
+    color: white;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.fas {
+    font-size: 22px;
+    position: relative;
+    right: 21px;
+    color: white;
+    margin-left: 33px;
+    top: 9px;
+}
+
+.fas:hover {
+    color: black;
+}
+
+.form-control {
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.btn {
+    border-radius: 15px;
+}
+
+.fa {
+    font-size: 14px;
+}
+
+#myTable {
+    padding: 20px;
+    margin-top: 20px;
+}
